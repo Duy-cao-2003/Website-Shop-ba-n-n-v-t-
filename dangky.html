@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Đăng ký thành viên</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container mt-5">
+  <h2>Đăng ký thành viên</h2>
+  <h4>Mật khẩu yêu cầu 8 kí tự và có 1 kí tự đặc biệt</h4>
+  <form id="registrationForm">
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" required value="Tên đăng nhập phải là email">
+    </div>
+    <div class="form-group">
+      <label for="password">Mật khẩu:</label>
+      <input type="password" class="form-control" id="password" required> 
+    </div>
+    <div class="form-group">
+      <label for="confirmPassword">Nhắc lại mật khẩu:</label>
+      <input type="password" class="form-control" id="confirmPassword" required>
+    </div>
+    <div class="form-group">
+      <label for="fullName">Họ và tên:</label>
+      <input type="text" class="form-control" id="fullName" required>
+    </div>
+    <div class="form-group">
+      <label for="phone">Điện thoại di động:</label>
+      <input type="tel" class="form-control" id="phone" required>
+    </div>
+    <div class="form-group">
+      <label for="address">Địa chỉ:</label>
+      <input type="text" class="form-control" id="address" required>
+    </div>
+    <div class="form-group">
+      <label for="detailAddress">Địa chỉ chi tiết:</label>
+      <input type="text" class="form-control" id="detailAddress" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Đăng ký</button>
+  </form>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+  $(document).ready(function() {
+    $('#registrationForm').submit(function(e) {
+      e.preventDefault();
+      
+      
+      var email = $('#email').val();
+      var password = $('#password').val();
+      var confirmPassword = $('#confirmPassword').val();
+      var fullName = $('#fullName').val();
+      var phone = $('#phone').val();
+      var address = $('#address').val();
+      var detailAddress = $('#detailAddress').val();
+      
+   
+      if (password !== confirmPassword) {
+        alert('Mật khẩu và mật khẩu nhập lại không khớp!');
+        return;
+      }
+      
+      
+      alert('Đăng ký thành viên thành công!');
+    });
+  });
+</script>
+
+</body>
+</html>

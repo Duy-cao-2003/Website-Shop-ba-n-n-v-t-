@@ -1,0 +1,19 @@
+.login-form {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: orangered;
+    padding: 20px;
+    border: 1px solid black;
+    z-index: 999;
+  }
+  
+  .login-form label,
+  .login-form input,
+  .login-form button {
+    display: block;
+    margin-bottom: 10px;
+  }
+  

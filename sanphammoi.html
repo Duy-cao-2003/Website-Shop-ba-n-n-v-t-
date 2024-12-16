@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Trang web bán đồ ăn vặt</title>
+  <link rel="stylesheet" href="baitaplon.css">
+  <link rel="stylesheet" href="dangnhap.css"> <!-- Liên kết đến file CSS -->
+</head>
+<body>
+  <div class="boder">
+  <section id="home">
+    <h1 style="color:white; margin-left: 2%">Shop Ăn Vặt "ĂN CÙNG TÓP TÉP"</h1>
+    <!-- Nội dung trang chủ -->
+  </section>
+  </div>
+  <header>
+    <div class="menu">
+      <ul>
+          <li><a href="baitaplon.html">Trang chủ</a></li>
+          <li><a href="#">Sản phẩm mới</a></li>
+          <li>
+              <a href="#">Khác</a>
+              <ul class="sub-menu">
+                  <li><a href="#"><span style="color:black"><button class="scroll-button" onclick="scrollToTopsearch()">TOP TÌM KIẾM</button></span></a></li>
+                  <li><a href="#"><span style="color:black"><button class="scroll-button" onclick="scrollToBottom()">CÁC MẶT HÀNG KHÁC</button></span></a></li>
+                  <li><a href="#"><span style="color:black"><button class="scroll-button" onclick="scrollToTop()">CẢM ƠN VÀ LIÊN HỆ</button></span></a></li>
+              </ul>
+          </li>
+      </ul>
+  </div>
+
+    </header>
+    
+    <script>
+      function scrollToTopsearch() {
+        const element = document.getElementById('container');
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+          // Cuộn mượt đến phần tử có ID là 'top-search'
+        }
+      }
+
+      function scrollToBottom() {
+        const element = document.getElementById('cacmathangkhac');
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+          // Cuộn mượt đến phần tử có ID là 'top-search'
+        }
+      }
+      
+      function scrollToTop() {
+        const element = document.getElementById('footer-section');
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+          // Cuộn mượt đến phần tử có ID là 'top-search'
+        }
+      }
+      
+    </script>
+
+    <div class="dangnhap">
+      <button class="login-button" onclick="showLoginForm()">Đăng nhập</button>
+      <button class="register-button" onclick="window.location.href='dangky.html'">Đăng ký</button>
+    </div>
+  
+    <!-- Form đăng nhập ẩn -->
+    <div class="login-form" id="loginForm">
+      <form>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username">
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+        <br>
+        <button type="button" onclick="window.location.href='tkduycao.html '">Đăng nhập</button>
+        <button type="button" onclick="hideLoginForm()">Đóng</button>
+      </form>
+    </div>
+    
+    
+    <script>
+      function showLoginForm() {
+        document.getElementById('loginForm').style.display = 'block';
+      }
+  
+      function hideLoginForm() {
+        document.getElementById('loginForm').style.display = 'none';
+      }
+  
+      function login() {
+        // Lấy giá trị username và password từ form
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+  
+        // Kiểm tra username và password
+        // Trong ví dụ này, giả sử username và password là 'admin'
+        if (username === 'caomanhduy@gmail.com' && password === '123') {
+          alert('Đăng nhập thành công!');
+          hideLoginForm();
+        } else {
+          alert('Tên người dùng hoặc mật khẩu không đúng.');
+        }
+      }
+    </script>
+
+    
+
+  <div class="anhnen">
+    <a href="#product-link"><img src="anhnen1.png" alt="anhnen1"></a>
+  </div>
+  <div class="shop">
+      <img src="anhnen2.png">
+      <div class="box1" style="margin-left: 37%;">
+        <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-shop-window" viewBox="0 0 16 16">
+          <path d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.371 2.371 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976l2.61-3.045zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0M1.5 8.5A.5.5 0 0 1 2 9v6h12V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5m2 .5a.5.5 0 0 1 .5.5V13h8V9.5a.5.5 0 0 1 1 0V13a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.5a.5.5 0 0 1 .5-.5"/>
+        </svg> Sản Phẩm: <n style="color:rgb(223, 69, 2)">20</n></p>
+        <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-plus" viewBox="0 0 16 16">
+          <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H1s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C9.516 10.68 8.289 10 6 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664z"/>
+          <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5"/>
+        </svg> Đang Theo: <n style="color:rgb(223, 69, 2)">5</n></p>
+        <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-left-dots" viewBox="0 0 16 16">
+          <path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+          <path d="M5 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0m4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+        </svg> Tỷ Lệ Phản Hồi Chat: <n style="color:rgb(223, 69, 2)">10% (Trong Vài Ngày)</n></p>
+      </div>
+      <div class="box1">
+        <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+          <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664z"/>
+        </svg> Người Theo Dõi: <n style="color:rgb(223, 69, 2)">11,6k</n></p>
+        <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
+          <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+        </svg> Đánh Giá: <n style="color:rgb(223, 69, 2)">4,8 (103 Đánh Giá)</n></p>
+        <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-check" viewBox="0 0 16 16">
+          <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m1.679-4.493-1.335 2.226a.75.75 0 0 1-1.174.144l-.774-.773a.5.5 0 0 1 .708-.708l.547.548 1.17-1.951a.5.5 0 1 1 .858.514ZM11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0M8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4"/>
+          <path d="M8.256 14a4.474 4.474 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10c.26 0 .507.009.74.025.226-.341.496-.65.804-.918C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4s1 1 1 1z"/>
+        </svg> Tham Gia: <n style="color:rgb(223, 69, 2)">8 Tháng Trước</n></p>
+      </div>
+  </div>
+  
+  <div id="container">
+    <!-- Layout dưới -->
+    <h1>TOP TÌM KIẾM</h1>
+    <div class="grid-container">
+      <div class="grid-item">
+        <button class="button button1" onclick="window.location.href='img1.jpg'">
+        <img src="img1.jpg" alt="ảnh 1"><h3 id="boder">Da heo hoàng kim</h3>
+        <h2 style="color:red">₫120.000</h2>
+        <h2 style="color:yellow">✩✩✩✩✩</h2>Đã bán 2k3 sản phẩm
+        </button>
+      </div>
+      <div class="grid-item">
+        <button class="button button1" onclick="window.location.href='img2.jpg'">
+        <img src="img2.jpg" alt="ảnh 2"><h3 id="boder">Mực cán tẩm gia vị</h3>
+        <h2 style="color:red">₫130.000</h2>
+        <h2 style="color:yellow">✩✩✩✩✩</h2>Đã bán 1k5 sản phẩm
+        </button>
+      </div>
+      <div class="grid-item">
+        <button class="button button1" onclick="window.location.href='img3.jpg'">
+        <img src="img3.jpg" alt="ảnh 3"><h3 id="boder">Khô heo cháy tỏi</h3>
+        <h2 style="color:red">₫90.000</h2>
+        <h2 style="color:yellow">✩✩✩✩✩</h2>Đã bán 900 sản phẩm
+        </button>
+      </div>
+      <div class="grid-item">
+        <button class="button button1" onclick="window.location.href='img4.jpg'">
+        <img src="img4.jpg" alt="ảnh 4"><h3 id="boder">Mực mix 2 vị </h3>
+        <h2 style="color:red">₫200.000</h2>
+        <h2 style="color:yellow">✩✩✩✩✩</h2>Đã bán 500 sản phẩm
+        </button>
+      </div>
+      <div class="grid-item">
+        <button class="button button1" onclick="window.location.href='img5.jpg'">
+        <img src="img5.jpg" alt="ảnh 5"><h3 id="boder">Khô gà lá chanh </h3>
+        <h2 style="color:red">₫70.000</h2>
+        <h2 style="color:yellow">✩✩✩✩✩</h2>Đã bán 175 sản phẩm
+        </button>
+      </div>
+      <div class="grid-item">
+        <button class="button button1" onclick="window.location.href='img6.jpg'">
+        <img src="img6.jpg" alt="ảnh 6"><h3 id="boder">Khô bò miếng</h2>
+        <h2 style="color:red">₫110.000</h2>
+        <h2 style="color:yellow">✩✩✩✩</h2>Đã bán 611 sản phẩm
+        </button>
+      </div>
+      <div class="grid-item">
+        <button class="button button1" onclick="window.location.href='img7.jpg'">
+        <img src="img7.jpg" alt="ảnh 7"><h3 id="boder">Mực xé hấp dừa</h2>
+        <h2 style="color:red">₫116.000</h2>
+        <h2 style="color:yellow">✩✩✩✩✩</h2>Đã bán 1500 sản phẩm
+        </button>
+      </div>
+      <div class="grid-item">
+        <button class="button button1" onclick="window.location.href='img8.jpg'">
+        <img src="img8.jpg" alt="ảnh 8"><h3 id="boder">Cb Nhoàm Nhoàm</h2>
+        <h2 style="color:red">₫250.000</h2>
+        <h2 style="color:yellow">✩✩✩✩✩</h2>Đã bán 350 sản phẩm
+        </button>
+      </div>
+      <div class="grid-item">
+        <button class="button button1" onclick="window.location.href='img9.jpg'">
+        <img src="img9.jpg" alt="ảnh 9"><h3 id="boder">Combo Nhem Nhem</h2>
+        <h2 style="color:red">₫210.000</h2>
+        <h2 style="color:yellow">✩✩✩✩</h2>Đã bán 281 sản phẩm
+        </button>
+      </div>
+      <div class="grid-item">
+        <button class="button button1" onclick="window.location.href='img10.jpg'">
+        <img src="img10.jpg" alt="ảnh 10"><h3 id="boder">Mực xé hấp dừa</h2>
+        <h2 style="color:red">₫120.000</h2>
+        <h2 style="color:yellow">✩✩✩✩✩</h2>Đã bán 835 sản phẩm
+        </button>
+      </div>
+      </div>
+      <h1 id="cacmathangkhac">CÁC MẶT HÀNG KHÁC</h1><br>
+      <div class="additional-items">
+      <div class="grid-item">
+        <button class="button button1" onclick="window.location.href='hangdai.jpg'">
+        <img src="hangdai.jpg" alt="ảnh 11"><h3 id="boder">Dê nướng Hằng Đại</h2>
+        <h2 style="color:red">₫15.000</h2>
+        <h2 style="color:yellow">✩✩✩✩</h2>Đã bán 2k1 sản phẩm
+        </button>
+      </div>
+      <div class="grid-item">
+        <button class="button button1" onclick="window.location.href='voirong.jpg'">
+        <img src="voirong.jpg" alt="ảnh 12"><h3 id="boder">Vòi rồng-set 10 gói</h2>
+        <h2 style="color:red">₫19.000</h2>
+        <h2 style="color:yellow">✩✩✩✩✩</h2>Đã bán 835 sản phẩm
+        </button>
+      </div>
+      <div class="grid-item">
+        <button class="button button1" onclick="window.location.href='snackmeo.jpg'">
+        <img src="snackmeo.jpg" alt="ảnh 13"><h3 id="boder">snack mèo</h2>
+        <h2 style="color:red">₫2.000</h2>
+        <h2 style="color:yellow">✩✩✩✩✩</h2>Đã bán 835 sản phẩm
+        </button>
+      </div>
+      <div class="grid-item">
+        <button class="button button1" onclick="window.location.href='tamcay.jpg'">
+        <img src="tamcay.jpg" alt="ảnh 14"><h3 id="boder">Tăm cay-set 10 gói</h2>
+        <h2 style="color:red">₫180.000</h2>
+        <h2 style="color:yellow">✩✩✩✩✩</h2>Đã bán 835 sản phẩm
+        </button>
+      </div>
+      <div class="grid-item">
+        <button class="button button1" onclick="window.location.href='nemnuong.jpg'">
+        <img src="nemnuong.jpg" alt="ảnh 15"><h3 id="boder">Nem nướng</h2>
+        <h2 style="color:red">₫2.000</h2>
+        <h2 style="color:yellow">✩✩✩✩✩</h2>Đã bán 835 sản phẩm
+        </button>
+    </div>
+    <div class="grid-item">
+      <button class="button button1" onclick="window.location.href='snackcua.jpg'">
+      <img src="snackcua.jpg" alt="ảnh 16"><h3 id="boder">Snack cua</h2>
+      <h2 style="color:red">₫60.000</h2>
+      <h2 style="color:yellow">✩✩✩✩</h2>Đã bán 605 sản phẩm
+      </button>
+  </div>
+  <div class="grid-item">
+    <button class="button button1" onclick="window.location.href='quaygion.jpg'">
+    <img src="quaygion.jpg" alt="ảnh 17"><h3 id="boder">Quẩy giòn-10 hộp</h2>
+    <h2 style="color:red">₫17.000</h2>
+    <h2 style="color:yellow">✩✩✩✩✩</h2>Đã bán 245 sản phẩm
+    </button>
+</div>
+<div class="grid-item">
+  <button class="button button1" onclick="window.location.href='potato.jpg'">
+  <img src="potato.jpg" alt="ảnh 18"><h3 id="boder">Potato</h2>
+  <h2 style="color:red">₫5.000</h2>
+  <h2 style="color:yellow">✩✩✩✩✩</h2>Đã bán 135 sản phẩm
+  </button>
+</div>
+<div class="grid-item">
+  <button class="button button1" onclick="window.location.href='mytron.jpg'">
+  <img src="mytron.jpg" alt="ảnh 19"><h3 id="boder">Mỳ trộn</h2>
+  <h2 style="color:red">₫3.000</h2>
+  <h2 style="color:yellow">✩✩✩✩</h2>Đã bán 372 sản phẩm
+  </button>
+</div>
+<div class="grid-item">
+  <button class="button button1" onclick="window.location.href='milo.jpg'">
+  <img src="milo.jpg" alt="ảnh 20"><h3 id="boder">Milo</h2>
+  <h2 style="color:red">₫5.000</h2>
+  <h2 style="color:yellow">✩✩✩✩</h2>Đã bán 300 sản phẩm
+  </button>
+</div>
+      <!-- Thêm các ảnh khác -->
+
+
+  <footer>
+    <div id="footer-section">
+      <h2>Cảm ơn!</h2>
+      <p>Xin cảm ơn bạn đã ghé thăm cửa hàng của chúng tôi.</p>
+    </div>
+    <section id="contact">
+      <h2>Liên hệ</h2>
+      <h4>Hãy để lại thông tin liên lạc để phản hồi với chúng tôi</h4>
+      <form id="contact-form" method="post" onsubmit="return submitForm();">
+        <input type="text" name="name" placeholder="Họ và tên" required>
+        <input type="text" name="name" placeholder="Số điện thoại" required>
+        <button type="submit">Gửi</button>
+      </form>
+    </section>
+    
+    <script>
+      function submitForm() {
+        // Thực hiện xử lý form ở đây (ví dụ: gửi dữ liệu đến server)
+    
+        // Sau khi xử lý form thành công, chuyển hướng đến trang "camon.html"
+        window.location.href = 'camon.html';
+        
+        // Ngăn chặn trình duyệt thực hiện hành động mặc định của form (gửi dữ liệu)
+        return false;
+      }
+    </script>
+    <div class="footer-section">
+      <h2>Giới thiệu về người đầu tư</h2>
+      <p>Thông tin về người sáng lập hoặc đội ngũ quản lý cửa hàng.</p>
+    </div>
+  </footer>
+  </div>
+</body>
+</html>
